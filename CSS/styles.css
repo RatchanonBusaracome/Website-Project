@@ -1,0 +1,217 @@
+/* styles.css */
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-image: url('https://cdnb.artstation.com/p/assets/images/images/019/170/311/large/ford-nguyen-alley.jpg?1562316083'); /* แก้ URL ให้ตรงกับที่อยู่ของไฟล์รูปภาพ */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .menu {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .menu li {
+    margin-right: 20px;
+  }
+  
+  .menu li:last-child {
+    margin-right: 0;
+  }
+  
+  header h1 {
+    font-family: 'Impact', sans-serif;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  header nav ul {
+    list-style: none;
+  }
+  
+  header nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  header nav ul li:last-child {
+    margin-right: 0;
+  }
+  
+  header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem; /* เปลี่ยนขนาดข้อความในเมนู header */
+    transition: color 0.3s ease;
+  }
+  
+  header nav ul li a:hover {
+    color: #ffc107;
+  }
+  
+  main {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 120px); /* ปรับสูงของส่วนเนื้อหาสำหรับหน้าจอใหญ่ */
+    text-align: center; /* จัดเรียงข้อความในศูนย์ */
+  }
+  
+  main h2 {
+    font-size: 2.5rem; /* ปรับขนาดข้อความให้ใหญ่ขึ้น */
+    margin-bottom: 20px; /* เพิ่มระยะห่างด้านล่างของข้อความ */
+  }
+
+  main h3 {
+    font-size: 1.5rem; /* ปรับขนาดข้อความให้ใหญ่ขึ้น */
+    margin-bottom: 20px; /* เพิ่มระยะห่างด้านล่างของข้อความ */
+  }
+  
+  main h4 {
+    font-size: 1.5rem; /* ปรับขนาดข้อความให้ใหญ่ขึ้น */
+    margin-bottom: 20px; /* เพิ่มระยะห่างด้านล่างของข้อความ */
+    color: black;
+  }
+
+  main p {
+    font-size: 1.2rem; /* ปรับขนาดข้อความให้ใหญ่ขึ้น */
+    line-height: 1.6; /* ปรับความสูงของบรรทัด */
+    text-align: left;
+  }
+  
+  
+  footer {
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  /* Custom styles */
+  main {
+    background: rgba(0, 0, 0, 0.6); /* เปลี่ยนเป็นสีพื้นหลังส่วนเนื้อหา (สีดำทึบๆ) */
+    border-radius: 20px; /* ขอบมน */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* เงา */
+    padding: 40px; /* ขอบรอบภายใน */
+  }
+
+#favorite-songs {
+  margin-top: 50px;
+}
+
+.songs-list {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.songs-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.songs-list li {
+  margin-bottom: 10px;
+}
+
+.songs-list li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.songs-list li a:hover {
+  color: #007bff;
+}
+
+img {
+  width: 350px; /* กำหนดความกว้างของรูปภาพ */
+  height: auto; /* ทำให้ความสูงของรูปภาพปรับตามอัตราส่วน */
+}
+
+/* ปรับขนาดรูปภาพแบบ Responsive */
+@media (max-width: 768px) {
+  img {
+    width: 150px; /* ปรับขนาดรูปภาพเมื่อหน้าจอเล็กกว่าหรือเท่ากับ 768px */
+  }
+}
+
+.game{
+    width: 500px;
+    height: 200px;
+    margin: auto;
+    
+}
+
+.game li {
+    margin-bottom: 10px;
+  }
+
+main .game{
+  background-color: #f9f9f9;
+  padding: 0px;
+  border-radius: 5px;
+}
+
+#character{
+    width: 20px;
+    height: 50px;
+    background-color: red;
+    position:relative;
+    top: 150px;
+}
+.animate{
+    animation: jump 0.3s linear;
+}
+@keyframes jump{
+    0%{top: 150px;}
+    30%{top: 100px;}
+    70%{top: 100px;}
+    100%{top: 150px;}
+}
+
+
+#block{
+    background-color: blue;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 130px;
+    left: 500px;
+    animation: block 1s infinite linear;
+}
+@keyframes block{
+    0%{left: 500px}
+    100%{left: -20px}
+}
+p{
+    text-align: center;
+}
+
+.titlegames h2{
+  text-align: center;
+}
